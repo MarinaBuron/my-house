@@ -17,6 +17,8 @@ public class Picture
     private Circle sun;
     private Circle moon;
     private Square grass;
+    private Person boy;
+    private Person girl;
     /**
      * Constructor for objects of class Picture
      */
@@ -73,6 +75,9 @@ public class Picture
         moon.changeColor("magenta");
         moon.changeSize(40);
         moon.slowMoveVertical(110);
+        
+        boy = new Person();
+        girl = new Person();
 
     }
     /** 
@@ -86,6 +91,16 @@ public class Picture
             moon.makeInvisible();
             sun.makeVisible();
             sun.slowMoveVertical(-120);
+            boy.moveVertical(-10);
+            boy.moveHorizontal(230);
+            boy.makeVisible();
+            boy.slowMoveHorizontal(-200);
+            girl.moveVertical(-10);
+            girl.moveHorizontal(-270);
+            girl.makeVisible();
+            girl.slowMoveHorizontal(135);
+    
+            
         }
     }
     /**
