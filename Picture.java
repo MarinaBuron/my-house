@@ -62,7 +62,9 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
-        sun.slowMoveVertical(-160);
+        sun.slowMoveVertical(90);
+        sun.makeInvisible();
+        
         
         moon = new Circle();
         moon.moveVertical(-160);
@@ -71,11 +73,25 @@ public class Picture
         moon.changeColor("magenta");
         moon.changeSize(40);
         moon.slowMoveVertical(110);
-    }
 
+    }
+    /** 
+    * Change this picture to sunrise
+    */
+    
+    public void amanecer()
+    {
+        if (sun != null)
+        {
+            moon.makeInvisible();
+            sun.makeVisible();
+            sun.slowMoveVertical(-120);
+        }
+    }
     /**
      * Change this picture to black/white display
      */
+    
     public void setBlackAndWhite()
     {
         if (wall != null)   // only if it's painted already...
